@@ -3,7 +3,7 @@ require 'rails_helper'
 # Change this ArticlesController to your project
 RSpec.describe ProjectsController, type: :controller do
 
-    login_user
+
 
     # This should return the minimal set of attributes required to create a valid
     # Article. As you add validations to Article, be sure to adjust the attributes here as well.
