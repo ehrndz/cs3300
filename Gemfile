@@ -18,6 +18,8 @@ gem 'mini_racer', platforms: :ruby
 
 gem 'simplecov', require: false, group: :test
 
+gem 'devise'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -34,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :production do
     gem 'pg', '~> 0.21' # for Heroku deployment
-    gem 'rails_12factor'
+      gem 'rails_12factor'
 end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -43,6 +45,7 @@ end
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
+  gem 'capybara', '>= 2.15'
   gem 'rspec-rails', '~> 3.7'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -64,7 +67,8 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-
+  gem 'simplecov', require: false
+  gem 'factory_bot_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
