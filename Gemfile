@@ -44,6 +44,10 @@ end
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+gem 'bootstrap', '~> 4.6.1'
+
+gem 'jquery-rails'
+
 group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'rspec-rails', '~> 3.7'
