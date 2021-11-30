@@ -6,12 +6,14 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/users/sign_in">Log In<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sign Up</a>
-      </li>
+    <p class="alert"><%= alert %></p>
+    <% if user_signed_in? %>
+      <% current_user.email %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to 'Log In', new_user_session_path %>
+    <%= link_to 'Sign Up', new_user_registration_path %>
+    <% end %>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
