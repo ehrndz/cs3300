@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
   
   before_action :set_project, only: %i[ show edit update destroy ]
 
-  before_action :authenticate_user!
+  skip_before_action :authenticate_user!, :raise => false
 
   # GET /projects or /projects.json
   def index
