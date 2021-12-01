@@ -3,14 +3,6 @@
 <h1>Projects</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
   <div class="flexBox">
     <% @projects.each do |project| %>
@@ -19,17 +11,16 @@
             <%= project.description %>
             <br>
             <% if user_signed_in? %>
-            <li class="nav-item">
+            <li class="btn btn-primary">
               <%= link_to 'Show', project %>
             </li>
-            <li class="nav-item">
+            <li class="btn btn-primary">
               <%= link_to 'Edit', edit_project_path(project) %>
             </li>
-            <li class="nav-item">
+            <li class="btn btn-primary">
               <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
             </li>
             <%end%>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     <% end %>
     </div>
