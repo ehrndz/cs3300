@@ -18,15 +18,15 @@
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
-            <h5><% project.title %></h5>
+            <p><% project.title %></p>
             <p><%= project.description %></p>
-            <li class="nav-item">
-              <td><%= link_to 'Show', project %></td>
+            <li class="nav-link">
+              <%= link_to 'Show', project %>
             </li>
-            <li class="nav-item">
+            <li class="nav-link">
               <%= link_to 'Edit', edit_project_path(project) %>
             </li>
-            <li class="nav-item">
+            <li class="nav-link">
               <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
             </li>
             <a href="#" class="btn btn-primary">Go somewhere</a>
