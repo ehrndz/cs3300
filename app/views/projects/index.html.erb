@@ -12,23 +12,30 @@
   </thead>
 
   <tbody>
+  <div class="row">
     <% @projects.each do |project| %>
       <tr>
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
-            <td><%= project.title %></td>
-            <td><%= project.description %></td>
-            <td><%= link_to 'Show', project %></td>
-            <td><%= link_to 'Edit', edit_project_path(project) %></td>
-            <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <h5><% project.title %></h5>
+            <p><%= project.description %></p>
+            <li class="nav-item">
+              <td><%= link_to 'Show', project %></td>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Edit', edit_project_path(project) %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </li>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
       </div>
       </tr>
     <% end %>
-
+  </div>
   </tbody>
 </table>
 
