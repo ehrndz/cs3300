@@ -14,14 +14,6 @@
             <li class="button-60">
               <%= link_to 'Show', project %>
             </li>
-            <% if project %>
-            <li class="button-60">
-              <%= link_to 'Edit', edit_project_path(project) %>
-            </li>
-            <li class="button-60">
-              <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </li>
-            <%end%>
             <%end%>
       </div>
     <% end %>
