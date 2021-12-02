@@ -2,25 +2,19 @@
 <p id="notice"><%= notice %></p>
 <h1 style="text-align:center;">Projects</h1>
 <br>
-<style>
-#bottom {
-  position: absolute;
-}
-</style>
+
 <table>
   <tbody>
   <div class="flexBox">
     <% @projects.each do |project| %>
       <div class="container2 containerWidth rounded">
-            <h3><%= project.title %></h3>
+            <h3 style="text-align:center;"><%= project.title %></h3>
             <%= project.description %>
             <br>
             <% if user_signed_in? %>
-            <div id="bottom">
-            <li class="button-60">
+            <li class="button-60", style="text-align:center;">
               <%= link_to 'Show', project %>
             </li>
-            </div>
             <%end%>
       </div>
     <% end %>
