@@ -13,6 +13,7 @@
 
   <div class="field", style="text-align:center;">
     <%= form.label :title %>
+    <br>
     <%= form.text_field :title %>
   </div>
 
@@ -24,13 +25,9 @@
   <div class="actions">
     <div class="container">
 	    <div class="text-center">
-      <li class="button-60", class="text-center">
-        <%= form.submit %>
-        </li>
         <li class="text-center">
-          <%= link_to 'Back', projects_path%>
-      </li>
-
+          <%= form.submit %>
+        </li>
     	</div>
     </div>
   </div>
