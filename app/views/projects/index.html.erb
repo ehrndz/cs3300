@@ -12,9 +12,11 @@
             <%= project.description %>
             <br>
             <% if user_signed_in? %>
-            <li class="button-60", style="text-align:center;">
-              <%= link_to 'Show', project %>
-            </li>
+            <div class="text-center">
+              <li class="button-60", style="text-center;">
+                <%= link_to 'Show', project %>
+              </li>
+            </div>
             <%end%>
       </div>
     <% end %>
