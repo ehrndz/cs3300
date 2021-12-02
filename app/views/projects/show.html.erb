@@ -1,21 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<h3 style="text-align:center;"><%= @project.title %></h3>
 
-<p>
-  <strong>Description:</strong>
+<p style="text-align:center;">
   <%= @project.description %>
 </p>
 
-<li class="button-60">
+<li class="button-60", class="text-center">
   <%= link_to 'Edit', edit_project_path(@project) %>
 </li>
-<li class="button-60">
+<li class="button-60", class="text-center">
   <%= link_to 'Back', projects_path %>
 </li>
-<li class="button-60">
+<li class="button-60", class="text-center">
   <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
 </li>
