@@ -2,6 +2,13 @@
 <p id="notice"><%= notice %></p>
 <h1 style="text-align:center;">Projects</h1>
 <br>
+<style>
+#bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+</style>
 <table>
   <tbody>
   <div class="flexBox">
@@ -11,9 +18,11 @@
             <%= project.description %>
             <br>
             <% if user_signed_in? %>
-            <a class="button-60">
+            <div id="bottom">
+            <li class="button-60">
               <%= link_to 'Show', project %>
-            </a>
+            </li>
+            </div>
             <%end%>
       </div>
     <% end %>
