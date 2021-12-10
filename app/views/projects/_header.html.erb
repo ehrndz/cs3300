@@ -12,9 +12,11 @@
       <li class="nav-item", style="font-size: 16px">
         <%= link_to 'Log out', destroy_user_session_path, method: :delete, class:"nav-link" %>
       </li>
-      <li class="nav-item", style="font-size: 16px">
-      <%= link_to 'New Project', new_project_path, class:"nav-link" %>
-      </li>
+      <% if current_user.email == "test@user.com" %>
+        <li class="nav-item", style="font-size: 16px">
+          <%= link_to 'New Project', new_project_path, class:"nav-link" %>
+        </li>
+      <%end%>
     <% else %>
       <li class="nav-item", style="font-size: 16px">
         <%= link_to 'Log In', new_user_session_path, class:"nav-link" %>
@@ -27,11 +29,6 @@
     <% if user_signed_in? %>
         <span class="navbar-text">
           Welcome <%= current_user.email %>
-        </span>
-    <%end%>
-    <% if current_user.email == "test@user.com" %>
-        <span class="navbar-text">
-          Hello <%= current_user.email %>
         </span>
     <%end%>
   </div>

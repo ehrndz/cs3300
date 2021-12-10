@@ -8,14 +8,16 @@
 
 <div class="container">
 	<div class="text-center">
-    <li class="button-60", class="text-center">
-      <%= link_to 'Edit', edit_project_path(@project) %>
-    </li>
+    <% if current_user.email == "test@user.com" %>
+      <li class="button-60", class="text-center">
+        <%= link_to 'Edit', edit_project_path(@project) %>
+      </li>
+      <li class="button-60", class="text-center">
+        <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+    <%end%>
     <li class="button-60", class="text-center">
       <%= link_to 'Back', projects_path %>
-    </li>
-    <li class="button-60", class="text-center">
-      <%= link_to 'Delete', @project, method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
 	</div>
 </div>
