@@ -29,5 +29,10 @@
           Welcome <%= current_user.email %>
         </span>
     <%end%>
+    <% if current_user.email == "test@user.com" %>
+        <span class="navbar-text">
+          Hello <%= current_user.email %>
+        </span>
+    <%end%>
   </div>
 </nav>
